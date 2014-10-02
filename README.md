@@ -5,7 +5,9 @@ Useful filters for AngularJS
 
 Install
 -------
+```html
 bower install ng-filters --save-dev
+```
 
 Usage
 -------
