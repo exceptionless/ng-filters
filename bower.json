@@ -1,0 +1,16 @@
+{
+  "name": "angular-filters",
+  "version": "0.1",
+  "main": "./dist/angular-filters.min.js",
+  "description": "Useful filters for AngularJS",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/niemyjski/angular-filters.git"
+  },
+  "dependencies": {
+    "angular": ">=1.2.x"
+  },
+  "ignore": [
+    "node_modules"
+  ]
+}
