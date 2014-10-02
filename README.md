@@ -3,6 +3,10 @@ angular-filters
 
 Useful filters for AngularJS
 
+Install
+-------
+bower install ng-filters --save-dev
+
 Usage
 -------
 
