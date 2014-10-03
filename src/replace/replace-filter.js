@@ -11,7 +11,7 @@
                 if (!isString(input) || !isString(searchValue) || !isString(newValue))
                     return input;
 
-                return input.replace(searchValue, newValue);
+                return input.split(searchValue).join(newValue);
             };
         }]);
 }());

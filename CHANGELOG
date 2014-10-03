@@ -1,0 +1,2 @@
+#1.0
+* Fixed a bug where the replace filter was only replacing the first searchValue occurrence.

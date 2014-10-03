@@ -36,6 +36,6 @@ describe('Filter: replace', function() {
     });
 
     it('should replace b with B', function () {
-        expect(replace('blake', 'b', 'B')).toBe('Blake');
+        expect(replace('blake blake', 'b', 'B')).toBe('Blake Blake');
     });
 });

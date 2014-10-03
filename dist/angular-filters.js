@@ -1,6 +1,6 @@
 /**
  * Useful filters for AngularJS
- * @version v1.4.0 - 2014-10-02 * @link https://github.com/niemyjski/angular-filters
+ * @version v1.0 - 2014-10-03 * @link https://github.com/niemyjski/angular-filters
  * @author Blake Niemyjski <biemyjski@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function () {
@@ -76,7 +76,7 @@
                 if (!isString(input) || !isString(searchValue) || !isString(newValue))
                     return input;
 
-                return input.replace(searchValue, newValue);
+                return input.split(searchValue).join(newValue);
             };
         }]);
 }());
