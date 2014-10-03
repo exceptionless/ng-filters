@@ -17,7 +17,11 @@
     "angular",
     "client",
     "browser",
-    "filter"
+    "filter",
+    "bytes",
+    "join",
+    "replace",
+    "reverse"
   ],
   "maintainers": [
     {
