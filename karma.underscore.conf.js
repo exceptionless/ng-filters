@@ -9,14 +9,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.js',
+        'bower_components/angular/angular.js',
         'src/angular-filters.js',
         'src/**/*.js'
     ],
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit'

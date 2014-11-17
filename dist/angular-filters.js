@@ -1,6 +1,6 @@
 /**
  * Useful filters for AngularJS
- * @version v1.0 - 2014-10-03 * @link https://github.com/niemyjski/angular-filters
+ * @version v1.1 - 2014-11-17 * @link https://github.com/niemyjski/angular-filters
  * @author Blake Niemyjski <biemyjski@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function () {
@@ -106,6 +106,34 @@
 
                 if (typeof input === 'string' || input instanceof String) {
                     return reverseString(input);
+                }
+
+                return input;
+            };
+        }]);
+}());
+
+(function () {
+    'use strict';
+
+    angular.module('angular-filters')
+        .filter('toSpacedWords', [function () {
+            function toSpacedWords(input) {
+                if (!input.match(/\d+|__/g)) {
+                    input = input.replace(/([a-z])([A-Z])/g, '$1 $2');
+                    input = input.length > 1 ? input.charAt(0).toUpperCase() + input.slice(1) : input;
+                }
+
+                return input;
+            }
+
+            return function(input) {
+                if (!input) {
+                  return input;
+                }
+
+                if (typeof input === 'string' || input instanceof String) {
+                    return toSpacedWords(input);
                 }
 
                 return input;

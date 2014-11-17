@@ -60,6 +60,17 @@ ekalb
 [2, 1]
 ```
 
+###toSpacedWords
+Splits a single word into multiple words<br/>
+
+```html
+{{'blake' | toSpacedWords}}
+{{'blakeIsAwesome' | toSpacedWords}}
+
+Result:
+Blake
+Blake Is Awesome
+```
 
 Acknowledgements
 -------
