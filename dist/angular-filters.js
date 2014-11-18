@@ -1,6 +1,6 @@
 /**
  * Useful filters for AngularJS
- * @version v1.1 - 2014-11-17 * @link https://github.com/niemyjski/angular-filters
+ * @version v1.1.1 - 2014-11-18 * @link https://github.com/niemyjski/angular-filters
  * @author Blake Niemyjski <biemyjski@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function () {
