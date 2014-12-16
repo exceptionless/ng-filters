@@ -8,7 +8,8 @@
     "url": "git://github.com/niemyjski/angular-filters.git"
   },
   "dependencies": {
-    "angular": ">=1.3.x"
+    "angular": ">=1.3.x",
+    "angular-mocks": "~1.3.7"
   },
   "ignore": [
     "node_modules"
