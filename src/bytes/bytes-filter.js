@@ -4,11 +4,13 @@
     angular.module('angular-filters')
         .filter('bytes', [function () {
             return function(bytes, precision) {
-                if (bytes === 0) {
-                    return '0 B';
+                if (typeof bytes !== 'number') {
+                    bytes = parseFloat(bytes);
                 }
 
-                if (isNaN(parseFloat(bytes)) || !isFinite(bytes)) {
+                if (bytes === 0) {
+                    return '0 B';
+                } else if (isNaN(bytes) || !isFinite(bytes)) {
                     return '-';
                 }
 
@@ -17,7 +19,11 @@
                     bytes = -bytes;
                 }
 
-                if (typeof precision === 'undefined') {
+                if (typeof precision !== 'number') {
+                    precision = parseFloat(precision);
+                }
+
+                if (isNaN(precision) || !isFinite(precision)) {
                     precision = 1;
                 }
 

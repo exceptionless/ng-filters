@@ -1,6 +1,6 @@
 /**
  * Useful filters for AngularJS
- * @version v1.1.1 - 2014-11-18 * @link https://github.com/niemyjski/angular-filters
+ * @version v1.2.0 - 2015-01-30 * @link https://github.com/exceptionless/angular-filters
  * @author Blake Niemyjski <biemyjski@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function () {
@@ -15,11 +15,13 @@
     angular.module('angular-filters')
         .filter('bytes', [function () {
             return function(bytes, precision) {
-                if (bytes === 0) {
-                    return '0 B';
+                if (typeof bytes !== 'number') {
+                    bytes = parseFloat(bytes);
                 }
 
-                if (isNaN(parseFloat(bytes)) || !isFinite(bytes)) {
+                if (bytes === 0) {
+                    return '0 B';
+                } else if (isNaN(bytes) || !isFinite(bytes)) {
                     return '-';
                 }
 
@@ -28,7 +30,11 @@
                     bytes = -bytes;
                 }
 
-                if (typeof precision === 'undefined') {
+                if (typeof precision !== 'number') {
+                    precision = parseFloat(precision);
+                }
+
+                if (isNaN(precision) || !isFinite(precision)) {
                     precision = 1;
                 }
 

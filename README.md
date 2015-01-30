@@ -17,9 +17,11 @@ Prints a number in a friendly byte representation<br/>
 
 ```html
 {{1536 | bytes}}
+{{'1536' | bytes}}
 {{1536 | bytes:2}}
 
 Result:
+1.5 kB
 1.5 kB
 1.50 kB
 ```

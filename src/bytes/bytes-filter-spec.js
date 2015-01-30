@@ -17,6 +17,18 @@ describe('Filter: bytes', function() {
         expect(byte(size, 2)).toBe('1.50 kB');
     });
 
+    it('should parse string numbers into byte', function () {
+        expect(byte('0', 0)).toBe('0 B');
+        expect(byte('10', 0)).toBe('10 B');
+
+        var size = 1024 + 512;
+        expect(byte(size, '2')).toBe('1.50 kB');
+    });
+
+    it('should recognize zero byte', function () {
+        expect(byte(0, 0)).toBe('0 B');
+    });
+
     it('should recognize negative byte', function () {
         expect(byte(-1, 0)).toBe('-1 B');
     });
