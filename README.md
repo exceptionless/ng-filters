@@ -1,6 +1,6 @@
 # angular-filters
-[![Gitter](https://img.shields.io/badge/gitter-join_chat-brightgreen.svg)](https://gitter.im/exceptionless/Discuss) 
 [![Bower version](https://img.shields.io/bower/v/ng-filters.svg)](http://bower.io/search/?q=ng-filters)
+[![Gitter](https://img.shields.io/badge/gitter-join_chat-brightgreen.svg)](https://gitter.im/exceptionless/Discuss) 
 [![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/exceptionless) 
 
 Useful filters for AngularJS
