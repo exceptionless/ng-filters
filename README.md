@@ -1,7 +1,7 @@
 # angular-filters
 [![Bower version](https://img.shields.io/bower/v/ng-filters.svg)](http://bower.io/search/?q=ng-filters)
-[![Gitter](https://img.shields.io/badge/gitter-join_chat-brightgreen.svg)](https://gitter.im/exceptionless/Discuss) 
-[![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/exceptionless) 
+[![Gitter](https://img.shields.io/badge/gitter-join_chat-brightgreen.svg)](https://gitter.im/exceptionless/Discuss)
+[![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/exceptionless)
 
 Useful filters for AngularJS
 
@@ -40,6 +40,24 @@ Result:
 1,2
 1,2
 1, 2
+```
+
+###percentage
+Returns a number formatted as a percentage. Numbers between 0 and 1 will be rounded up to 10th decimal place.<br/>
+
+```html
+{{123 | percentage}}
+{{null | percentage}}
+{{60.0 | percentage}}
+{{0 | percentage}}
+{{0.000001 | percentage}}
+
+Result:
+123%
+0%
+60%
+0%
+0.1%
 ```
 
 ###replace
