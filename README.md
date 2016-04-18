@@ -1,4 +1,4 @@
-# angular-filters
+# ng-filters
 [![Bower version](https://img.shields.io/bower/v/ng-filters.svg)](http://bower.io/search/?q=ng-filters)
 [![Slack Status](https://slack.exceptionless.com/badge.svg)](https://slack.exceptionless.com)
 [![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/exceptionless)
