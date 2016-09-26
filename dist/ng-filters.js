@@ -1,9 +1,10 @@
 /**
  * Useful filters for AngularJS
- * @version v1.3.0 - 2016-04-04 * @link https://github.com/exceptionless/angular-filters
+ * @version v1.3.1 - 2016-09-26 * @link https://github.com/exceptionless/ng-filters
  * @author Blake Niemyjski <biemyjski@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
- */(function () {
+ */
+(function () {
     'use strict';
 
     angular.module('angular-filters', []);
@@ -74,21 +75,31 @@
 
     angular.module('angular-filters')
         .filter('percentage', ['$filter', function ($filter) {
-            return function(input) {
-                if (isNaN(input) || input === null || input === '' || input === false || input === true) {
+            function roundUpToNextTenth(input) {
+                input = parseFloat(input.toFixed(5));
+
+                // Shift
+                input = input.toString().split('e');
+                input = Math.ceil(+(input[0] + 'e' + (input[1] ? (+input[1] + 1) : 1)));
+                // Shift back
+                input = input.toString().split('e');
+
+                return  +(input[0] + 'e' + (input[1] ? (+input[1] - 1) : -1));
+            }
+
+            return function(input, max) {
+                input = parseFloat(input);
+                if (!isFinite(input)) {
                     return '0%';
                 }
 
-                if (input > 0.0 && input < 1) {
-                    // Shift
-                    input = input.toString().split('e');
-                    input = Math.ceil(+(input[0] + 'e' + (input[1] ? (+input[1] + 1) : 1)));
-                    // Shift back
-                    input = input.toString().split('e');
-                    return +(input[0] + 'e' + (input[1] ? (+input[1] - 1) : -1)) + '%';
+                input = Math.floor(input) + roundUpToNextTenth(input - Math.floor(input));
+                max = parseFloat(max);
+                if (isFinite(max) && input > max) {
+                    return max + '%';
                 }
 
-                return $filter('number')(input, (input % 1 === 0) ? 0 : 1) + '%';
+                return parseFloat($filter('number')(input, (input % 1 === 0) ? 0 : 1)) + '%';
             };
         }]);
 }());

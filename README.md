@@ -51,6 +51,7 @@ Returns a number formatted as a percentage. Numbers between 0 and 1 will be roun
 {{60.0 | percentage}}
 {{0 | percentage}}
 {{0.000001 | percentage}}
+{{100.000001 | percentage:100}}
 
 Result:
 123%
@@ -58,6 +59,7 @@ Result:
 60%
 0%
 0.1%
+100%
 ```
 
 ###replace

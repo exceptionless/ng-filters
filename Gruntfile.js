@@ -12,7 +12,8 @@ module.exports = function(grunt) {
                 ' * @link <%= pkg.homepage %>',
                 ' * @author <%= pkg.author %>',
                 ' * @license MIT License, http://www.opensource.org/licenses/MIT',
-                ' */'
+                ' */',
+                ''
               ].join('\n')
     },
     dirs: {
@@ -30,15 +31,6 @@ module.exports = function(grunt) {
     bowerInstall: {
         install: {
         }
-    },
-    uglify: {
-      options: {
-        banner: '<%= meta.banner %>'
-      },
-      dist: {
-        src: ['<%= concat.dist.dest %>'],
-        dest: '<%= dirs.dest %>/<%= pkg.name %>.min.js'
-      }
     },
     jshint: {
       files: ['Gruntfile.js', 'src/angular-filters.js', 'src/**/*.js'],
@@ -92,9 +84,6 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "concat" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
   grunt.loadNpmTasks('grunt-bower-task');
 
   grunt.renameTask('bower', 'bowerInstall');
@@ -106,7 +95,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['build']);
 
   // Build task.
-  grunt.registerTask('build', ['bowerInstall', /* 'test', */ 'concat', 'uglify']);
+  grunt.registerTask('build', ['bowerInstall', /* 'test', */ 'concat']);
 
   grunt.registerTask('test', ['karma:build', 'karma:buildUnderscore']);
 

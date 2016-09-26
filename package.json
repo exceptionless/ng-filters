@@ -1,14 +1,14 @@
 {
   "name": "ng-filters",
   "description": "Useful filters for AngularJS",
-  "version": "1.3.0",
-  "filename": "angular-filters.min.js",
-  "main": "./dist/angular-filters.min.js",
-  "homepage": "https://github.com/exceptionless/angular-filters",
+  "version": "1.3.1",
+  "filename": "ng-filters.js",
+  "main": "./dist/ng-filters.js",
+  "homepage": "https://github.com/exceptionless/ng-filters",
   "author": "Blake Niemyjski <biemyjski@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/exceptionless/angular-filters.git"
+    "url": "git://github.com/exceptionless/ng-filters.git"
   },
   "keywords": [
     "angular",
@@ -27,25 +27,25 @@
     }
   ],
   "dependencies": {
-    "angular": "^1.5.3",
-    "angular-mocks": "^1.5.3"
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8"
   },
   "devDependencies": {
-    "grunt": "0.4.5",
+    "grunt": "1.0.1",
     "grunt-bower": "0.21",
     "grunt-bower-task": "0.4",
     "grunt-cli": "1.2.0",
     "grunt-contrib-concat": "1.0",
     "grunt-contrib-jshint": "1.0",
-    "grunt-contrib-uglify": "1.0",
     "grunt-conventional-changelog": "6.1.0",
-    "grunt-karma": "0.12",
-    "jasmine-core": "2.4.1",
-    "karma": "0.13.22",
-    "karma-jasmine": "0.3.8",
-    "karma-mocha-reporter": "2.0.0",
-    "karma-phantomjs-launcher": "1.0.0",
-    "phantomjs-prebuilt": "2.1.7"
+    "grunt-karma": "2.0",
+    "jasmine-core": "2.5.2",
+    "karma": "1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "1.0.2",
+    "karma-mocha-reporter": "2.2.0",
+    "karma-phantomjs-launcher": "1.0.2",
+    "phantomjs-prebuilt": "2.1.12"
   },
   "scripts": {
     "test": "grunt test --verbose"
